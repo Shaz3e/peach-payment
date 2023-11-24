@@ -1,0 +1,27 @@
+{
+    "name": "shaz3e/peach-payment",
+    "description": "Peach payment hosted checkout",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Shaz3e\\PeachPayment\\": "src/"
+        },
+        "files": [
+            "src/Helpers/PeachPayment.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Shahrukh A. Khan",
+            "email": "iam@shaz3e.com"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Shaz3e\\PeachPayment\\Providers\\PeachPaymentServiceProvider"
+            ]
+        }
+    }
+}
