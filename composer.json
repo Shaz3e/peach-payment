@@ -16,6 +16,7 @@
             "email": "iam@shaz3e.com"
         }
     ],
+    "minimum-stability": "stable",
     "require": {},
     "extra": {
         "laravel": {
