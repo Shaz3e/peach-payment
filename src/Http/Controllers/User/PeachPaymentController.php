@@ -24,7 +24,9 @@ class PeachPaymentController extends Controller
             $peachPayment = new PeachPayment();
     
             // Create checkout using the helper
-            $checkoutId = $peachPayment->createCheckout($amount);
+            $checkoutData = $peachPayment->createCheckout($amount);
+
+            $checkoutId = $checkoutData['checkoutId'];
     
             // Render the payment form
             return view('peach-payment::peach-payment.user.post', compact('entityId', 'checkoutId'));
