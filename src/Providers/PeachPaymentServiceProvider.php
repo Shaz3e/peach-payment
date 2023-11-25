@@ -37,7 +37,7 @@ class PeachPaymentServiceProvider extends ServiceProvider
         /**
          * Load Routes
          */
-        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
+        $this->loadRoutesFrom(__DIR__ . '/../Routes/web.php');
 
         /**
          * Load views
