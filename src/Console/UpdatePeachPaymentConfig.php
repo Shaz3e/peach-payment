@@ -27,13 +27,13 @@ class UpdatePeachPaymentConfig extends Command
      */
     public function handle()
     {
+        $this->updateEnv('PEACHPAYMENT_ENVIRONMENT');
         $this->updateEnv('PEACHPAYMENT_ENTITY_ID');
         $this->updateEnv('PEACHPAYMENT_CLIENT_ID');
-        $this->updateEnv('PEACHPAYMENT_MERCHANT_ID');
         $this->updateEnv('PEACHPAYMENT_CLIENT_SECRET');
+        $this->updateEnv('PEACHPAYMENT_MERCHANT_ID');
         $this->updateEnv('PEACHPAYMENT_DOMAIN');
-        $this->updateEnv('PEACHPAYMENT_API_URL');
-        $this->updateEnv('PEACHPAYMENT_CHECKOUT_URL');
+        $this->updateEnv('PEACHPAYMENT_CURRENCY');
 
         $this->info('Peach Payment configuration updated successfully.');
     }

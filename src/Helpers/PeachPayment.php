@@ -11,9 +11,9 @@ class PeachPayment
     /**
      * Create checkout
      */
-    public static function createCheckout($amount)
+    public static function createCheckout($amount, $return_url = null, $order_number = null)
     {
-        $checkout_url = config('peach-payment.checkout_url');
+        $checkout_url = config('peach-payment.' . config('peach-payment.environment') . '.checkout_url').'/v2/checkout';
 
         $domain = config('peach-payment.domain');
         
@@ -29,7 +29,7 @@ class PeachPayment
 
         $entity_id = config('peach-payment.entity_id');
         $currency = config('peach-payment.currency');
-        $order_number = 'O-' . time();
+        $order_number = $order_number ?: 'OrderNo' . time(); // Use provided order_number or generate a new one
         $data = [
             'currency' => $currency,
             'forceDefaultMethod' => false,
@@ -37,7 +37,7 @@ class PeachPayment
             'merchantTransactionId' => $order_number,
             'amount' => $amount,
             'nonce' => $nonce,
-            'shopperResultUrl' => $domain.'/'.$order_number,
+            'shopperResultUrl' => $domain.'/'.$return_url.'/?peachpaymentOrder='.$order_number,
             'defaultPaymentMethod' => 'CARD',
         ];
         // $response = Http::withHeaders($headers)->post($checkout_url, $data); // Production
@@ -65,7 +65,12 @@ class PeachPayment
         
         $responseData = json_decode($result, true);
         $checkoutId = $responseData['checkoutId'];
-        return $checkoutId;
+        // return $checkoutId;
+        // Return an array with both checkoutId and order_number
+        return [
+            'checkoutId' => $checkoutId, 
+            'order_number' => $order_number
+        ];
 
         // // Check for request success
         // if ($response->successful()) {
@@ -85,8 +90,7 @@ class PeachPayment
      */
     private static function getToken()
     {
-        // config api url
-        $api_url = config('peach-payment.api_url');
+        $api_url = config('peach-payment.' . config('peach-payment.environment') . '.authentication_url');
         $tokenEndpoint = $api_url.'/api/oauth/token';
 
         $client_id = config('peach-payment.client_id');

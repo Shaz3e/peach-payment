@@ -40,6 +40,21 @@ $checkoutId = $peachPayment->createCheckout($amount);
 return  view('your.view', compact('entityId', 'checkoutId'));
 ```
 
+In your.view use the following code.
+
+```html
+<div id="payment-form"></div>
+<script src="https://sandbox-checkout.peachpayments.com/js/checkout.js"></script>
+<script>
+    const checkout = Checkout.initiate({
+        key: "{{ $entityId }}",
+        checkoutId: "{{ $checkoutId }}",
+    });
+
+    checkout.render("#payment-form");
+</script>
+```
+
 When you run ```php artisan update:peach-payment-config``` it will ask you the following.
 1. What is your PEACHPAYMENT_ENTITY_ID? 
 2. What is your PEACHPAYMENT_CLIENT_ID? 

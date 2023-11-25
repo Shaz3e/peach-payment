@@ -1,5 +1,5 @@
 <div id="payment-form"></div>
-<script src="https://sandbox-checkout.peachpayments.com/js/checkout.js"></script>
+<script src="{{ config('peach-payment.' . config('peach-payment.environment') . '.embedded_checkout_url') }}"></script>
 <script>
     const checkout = Checkout.initiate({
         key: "{{ $entityId }}",
