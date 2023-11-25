@@ -36,7 +36,9 @@ use Shaz3e\PeachPayment\Helpers\PeachPayment;
 $entityId = config('peach-payment.entity_id'); // Update in .env
 $amount = (float) $request->amount; // Dynamic amount should be float
 $peachPayment = new  PeachPayment();
-$checkoutId = $peachPayment->createCheckout($amount);
+$checkoutData = $peachPayment->createCheckout($amount);
+$order_number = $checkoutData['order_number']; // Optional
+$checkoutId = $checkoutData['checkoutId'];
 return  view('your.view', compact('entityId', 'checkoutId'));
 ```
 
@@ -64,7 +66,7 @@ When you run ```php artisan update:peach-payment-config``` it will ask you the f
 6. What is your PEACHPAYMENT_DOMAIN?
 7. What is your PEACHPAYMENT_CHECKOUT_URL? 
 
-After updating env data visit ```yourwebsite.com/peach-payment``` and it will fatch token and initiate the checkout at [PeachPayment](https://peachpayments.com)
+After updating env data visit ```yourwebsite.com/peachpayment``` and it will fatch token and initiate the checkout at [PeachPayment](https://peachpayments.com)
 
 Test Credit Cards [https://developer.peachpayments.com/docs/reference-test-and-go-live](https://developer.peachpayments.com/docs/reference-test-and-go-live)
 
