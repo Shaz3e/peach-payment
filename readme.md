@@ -41,13 +41,13 @@ return  view('your.view', compact('entityId', 'checkoutId'));
 ```
 
 When you run ```php artisan update:peach-payment-config``` it will ask you the following.
-1. What is your PEACHPAYMENT_API_URL?
+1. What is your PEACHPAYMENT_ENTITY_ID? 
 2. What is your PEACHPAYMENT_CLIENT_ID? 
-3. What is your PEACHPAYMENT_CLIENT_SECRET? 
-4. What is your PEACHPAYMENT_MERCHANT_ID? 
-5. What is your PEACHPAYMENT_CHECKOUT_URL? 
-6. What is your PEACHPAYMENT_DOMAIN? 
-7. What is your PEACHPAYMENT_ENTITY_ID? 
+3. What is your PEACHPAYMENT_MERCHANT_ID? 
+4. What is your PEACHPAYMENT_CLIENT_SECRET? 
+5. What is your PEACHPAYMENT_DOMAIN? 
+6. What is your PEACHPAYMENT_API_URL?
+7. What is your PEACHPAYMENT_CHECKOUT_URL? 
 
 After updating env data visit ```yourwebsite.com/peach-payment``` and it will fatch token and initiate the checkout at [PeachPayment](https://peachpayments.com)
 
