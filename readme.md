@@ -44,7 +44,7 @@ In your.view use the following code.
 
 ```html
 <div id="payment-form"></div>
-<script src="https://sandbox-checkout.peachpayments.com/js/checkout.js"></script>
+<script src="{{ config('peach-payment.' . config('peach-payment.environment') . '.embedded_checkout_url') }}"></script>
 <script>
     const checkout = Checkout.initiate({
         key: "{{ $entityId }}",
@@ -56,12 +56,12 @@ In your.view use the following code.
 ```
 
 When you run ```php artisan update:peach-payment-config``` it will ask you the following.
-1. What is your PEACHPAYMENT_ENTITY_ID? 
-2. What is your PEACHPAYMENT_CLIENT_ID? 
-3. What is your PEACHPAYMENT_MERCHANT_ID? 
+1. What is your PEACHPAYMENT_ENVIRONMENT? 
+2. What is your PEACHPAYMENT_ENTITY_ID? 
+3. What is your PEACHPAYMENT_CLIENT_ID? 
 4. What is your PEACHPAYMENT_CLIENT_SECRET? 
-5. What is your PEACHPAYMENT_DOMAIN? 
-6. What is your PEACHPAYMENT_API_URL?
+5. What is your PEACHPAYMENT_MERCHANT_ID? 
+6. What is your PEACHPAYMENT_DOMAIN?
 7. What is your PEACHPAYMENT_CHECKOUT_URL? 
 
 After updating env data visit ```yourwebsite.com/peach-payment``` and it will fatch token and initiate the checkout at [PeachPayment](https://peachpayments.com)
