@@ -27,6 +27,19 @@ php artisan vendor:publish --tag=peach-payment-config
 php artisan update:peach-payment-config
 ```
 
+### How to Use
+
+```php
+use Shaz3e\PeachPayment\Helpers\PeachPayment;
+
+// Use the following code within your controller method
+$entityId = config('peach-payment.entity_id'); // Update in .env
+$amount = (float) $request->amount; // Dynamic amount should be float
+$peachPayment = new  PeachPayment();
+$checkoutId = $peachPayment->createCheckout($amount);
+return  view('your.view', compact('entityId', 'checkoutId'));
+```
+
 When you run ```php artisan update:peach-payment-config``` it will ask you the following.
 1. What is your PEACHPAYMENT_API_URL?
 2. What is your PEACHPAYMENT_CLIENT_ID? 
