@@ -5,7 +5,7 @@
 [![License](http://poser.pugx.org/shaz3e/peach-payment/license)](https://packagist.org/packages/shaz3e/peach-payment)
 
 
-### Install Support Ticket
+### Install Peach Payment in Laravel
 ```bash
 composer require shaz3e/peach-payment
 ```
