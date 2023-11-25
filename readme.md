@@ -64,7 +64,7 @@ When you run ```php artisan update:peach-payment-config``` it will ask you the f
 4. What is your PEACHPAYMENT_CLIENT_SECRET? 
 5. What is your PEACHPAYMENT_MERCHANT_ID? 
 6. What is your PEACHPAYMENT_DOMAIN?
-7. What is your PEACHPAYMENT_CHECKOUT_URL? 
+7. What is your PEACHPAYMENT_CURRENCY? 
 
 After updating env data visit ```yourwebsite.com/peachpayment``` and it will fatch token and initiate the checkout at [PeachPayment](https://peachpayments.com)
 
