@@ -10,24 +10,6 @@ return [
     // Middleware
     'middleware' => ['web'],
 
-    // Default Currency
-    'currency' => env('PEACHPAYMENT_CURRENCY', 'ZAR'),
-
-    // Client ID
-    'client_id' => env('PEACHPAYMENT_CLIENT_ID'),
-
-    // Client Secret
-    'client_secret' => env('PEACHPAYMENT_CLIENT_SECRET'),
-
-    // Merchant ID
-    'merchant_id' => env('PEACHPAYMENT_MERCHANT_ID'),
-
-    // Domain
-    'domain' => env('PEACHPAYMENT_DOMAIN'),
-
-    // Entity ID
-    'entity_id' => env('PEACHPAYMENT_ENTITY_ID'),
-
     // Set environment
     'environment' => env('PEACHPAYMENT_ENVIRONMENT', 'sandbox'), // 'live' or 'sandbox'
 
@@ -42,4 +24,20 @@ return [
         'checkout_url' => 'https://testsecure.peachpayments.com',
         'embedded_checkout_url' => 'https://sandbox-checkout.peachpayments.com/js/checkout.js',
     ],
+    
+    // Entity ID
+    'entity_id' => env('PEACHPAYMENT_ENTITY_ID'),
+
+    // Client ID
+    'client_id' => env('PEACHPAYMENT_CLIENT_ID'),
+
+    // Client Secret
+    'client_secret' => env('PEACHPAYMENT_CLIENT_SECRET'),
+
+    // Merchant ID
+    'merchant_id' => env('PEACHPAYMENT_MERCHANT_ID'),
+
+    // Default Currency
+    'currency' => env('PEACHPAYMENT_CURRENCY', 'ZAR'),
+    
 ];

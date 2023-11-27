@@ -32,7 +32,6 @@ class UpdatePeachPaymentConfig extends Command
         $this->updateEnv('PEACHPAYMENT_CLIENT_ID');
         $this->updateEnv('PEACHPAYMENT_CLIENT_SECRET');
         $this->updateEnv('PEACHPAYMENT_MERCHANT_ID');
-        $this->updateEnv('PEACHPAYMENT_DOMAIN');
         $this->updateEnv('PEACHPAYMENT_CURRENCY');
 
         $this->info('Peach Payment configuration updated successfully.');
