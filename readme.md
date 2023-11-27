@@ -35,7 +35,6 @@ use Shaz3e\PeachPayment\Helpers\PeachPayment;
 // Use the following code within your controller method
 /**
  * Update in .env previously and get it from config
- * Or it be updated directly if you are not using pdate:peach-payment-config from console
  */
 $entityId = config('peach-payment.entity_id');
 /**
