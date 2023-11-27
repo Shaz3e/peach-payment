@@ -37,6 +37,9 @@ return [
     // Merchant ID
     'merchant_id' => env('PEACHPAYMENT_MERCHANT_ID'),
 
+    // Approved Domain and URL
+    'domain' => env('PEACHPAYMENT_DOMAIN'),
+
     // Default Currency
     'currency' => env('PEACHPAYMENT_CURRENCY', 'ZAR'),
     
