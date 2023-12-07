@@ -29,6 +29,9 @@ php artisan update:peach-payment-config
 
 ### How to Use
 
+Watch YouTube Video Tutorials
+[![Video](https://i.ytimg.com/vi/Gw1Xw5ED5YA/maxresdefault.jpg)](https://www.youtube.com/watch?v=Gw1Xw5ED5YA)
+
 ```php
 use Shaz3e\PeachPayment\Helpers\PeachPayment;
 
