@@ -29,7 +29,7 @@ php artisan update:peach-payment-config
 
 ### How to Use
 
-Watch YouTube Video Tutorials
+Watch YouTube Video Tutorials with detail instructions and customization
 [![Video](https://i.ytimg.com/vi/Gw1Xw5ED5YA/maxresdefault.jpg)](https://www.youtube.com/watch?v=Gw1Xw5ED5YA)
 
 ```php
