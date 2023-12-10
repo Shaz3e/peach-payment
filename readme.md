@@ -31,7 +31,7 @@ php artisan update:peach-payment-config
 
 Watch YouTube Video Tutorials with details instructions and customization
 
-[![YouTube Video](http://img.youtube.com/vi/Gw1Xw5ED5YA/0.jpg)](http://www.youtube.com/watch?v=Gw1Xw5ED5YA "Peach Payment Integration")
+[![YouTube Video](http://img.youtube.com/vi/Gw1Xw5ED5YA/maxresdefault.jpg)](http://www.youtube.com/watch?v=Gw1Xw5ED5YA "Peach Payment Integration")
 
 ```php
 use Shaz3e\PeachPayment\Helpers\PeachPayment;
