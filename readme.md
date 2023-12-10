@@ -30,7 +30,8 @@ php artisan update:peach-payment-config
 ### How to Use
 
 Watch YouTube Video Tutorials with details instructions and customization
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Gw1Xw5ED5YA?si=9pIymaUZRI8pvmWg&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+[![YouTube Video](http://img.youtube.com/vi/Gw1Xw5ED5YA/0.jpg)](http://www.youtube.com/watch?v=Gw1Xw5ED5YA "Peach Payment Integration")
 
 ```php
 use Shaz3e\PeachPayment\Helpers\PeachPayment;
